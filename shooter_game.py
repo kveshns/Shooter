@@ -59,8 +59,8 @@ text_loser = font1.render("LOSE", True, (255,215,0) )
 
 
 for i in range (1,6):
-    monsetr = Enemy('ufo.png', randint(80,620),0, 65,65, randint(2,3))
-    monsters.add(monsetr)
+    monster = Enemy('ufo.png', randint(80,620),0, 65,65, randint(2,3))
+    monsters.add(monster)
 
 for i in range (1, 3):
     asteroid = Enemy('asteroid.png', randint(80,620), 0 , 65,65, randint(1,2))
@@ -95,7 +95,7 @@ while game:
         collides = sprites_list = sprite.groupcollide(monsters, bullets, True, True)
         for c in collides:
             score += 1
-            monsetr = Enemy('ufo.png', randint(80,620),0, 65,65, randint(1,2))
+            monster = Enemy('ufo.png', randint(80,620),0, 65,65, randint(1,2))
             monsters.add(monsetr)
         if score >= 10:
             finish = True
@@ -115,8 +115,8 @@ while game:
             a.kill()
         clock.tick(60)
         for i in range(1,6):
-            monsetr = Enemy("ufo.png", randint(80, 700 - 80,), -40, 80, 50, 2)
-            monsters.add(monsetr)
+            monster = Enemy("ufo.png", randint(80, 700 - 80,), -40, 80, 50, 2)
+            monsters.add(monster)
         for i in range (1, 3):
             asteroid = Enemy('asteroid.png', randint(80,620), 0 , 65,65, randint(1,2))
             asteroids.add(asteroid)
